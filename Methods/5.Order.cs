@@ -34,19 +34,19 @@ namespace ConsoleApp72
         }
         private static void Coffee(double coffeePrice, int quantity)
         {
-            Console.WriteLine(coffeePrice*quantity);
+            Console.WriteLine($"{coffeePrice * quantity:f2}");
         }
         private static void Water(double waterPrice, int quantity)
         {
-            Console.WriteLine(waterPrice * quantity);
+            Console.WriteLine($"{waterPrice * quantity:f2}");
         }
         private static void Snacks(double snacksPrice, int quantity)
         {
-            Console.WriteLine(snacksPrice * quantity);
+            Console.WriteLine($"{snacksPrice * quantity:f2}");
         }
         private static void Coke(double cokePrice, int quantity)
         {
-            Console.WriteLine(cokePrice * quantity);
+            Console.WriteLine($"{cokePrice * quantity:f2}");
         }
     }
 }

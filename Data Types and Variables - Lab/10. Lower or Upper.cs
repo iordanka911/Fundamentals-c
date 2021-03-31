@@ -1,6 +1,6 @@
 using System;
 
-namespace TownInfo
+namespace LowerToUpper
 {
     class Program
     {

@@ -16,25 +16,22 @@ namespace EqualArrays
                             .Split()
                             .Select(int.Parse)
                             .ToArray();
-            int sum = 0;
-
-            for (int i = 0; i <arr1.Length; i++)
+          
+            for (int i = 0; i < arr1.Length; i++)
             {
-                if (arr1[i]!=arr2[i])
+                if (arr1[i] != arr2[i])
                 {
                     Console.WriteLine($"Arrays are not identical. Found difference at {i} index");
-                        break; 
-                   
-                }
-                else
-                {
-                    int currentNumber = arr1[i];
-                    sum += currentNumber;
-                    
-                   
+                    return;
+
                 }
             }
+            int sum = arr1.Sum();
             Console.WriteLine($"Arrays are identical. Sum: {sum}");
+                
+           
+           
+           
            
         }
 

@@ -7,26 +7,37 @@ namespace MaxSeqEl
     {
         static void Main(string[] args)
         {
-            int[] arr = Console.ReadLine()
-                             .Split(" ")
-                             .Select(int.Parse)
-                             .ToArray();
-
-            int number = int.Parse(Console.ReadLine());
+            string[] arr = Console.ReadLine()
+                                  .Split();
+            int bestCount = 0;
+            int bestIndex = 0;
 
             for (int i = 0; i < arr.Length; i++)
             {
-                int firstNumber = arr[i];
+                string currentElement = arr[i];
+                int currCounter = 1;
 
-                for (int j = i+1; j <arr.Length; j++)
+                for (int j = i+1; j < arr.Length; j++)
                 {
-                    int secondNumber = arr[j];
-
-                    if (firstNumber+secondNumber==number)
+                    if (currentElement==arr[j])
                     {
-                        Console.WriteLine($"{firstNumber} {secondNumber}");
+                        currCounter++;
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
+                if (currCounter>bestCount)
+                {
+                    bestCount = currCounter;
+                    bestIndex = i;
+                }
+            }
+
+            for (int i = 0; i < bestCount; i++)
+            {
+                Console.Write(arr[bestIndex]+" ");
             }
          }
     }

@@ -20,7 +20,7 @@ namespace ConvertDecimalToBinarySystem
 
         private static string GetHexDigit(int d)
         {
-            if (d<=10)
+            if (d<10)
             {
                 return "" + d;
             }

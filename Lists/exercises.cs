@@ -20,3 +20,28 @@ namespace ConsoleApp33
         }
     }
 }
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ConsoleApp41
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> myList = new List<string> { "Georgi", "Maria", "Petar" };
+            myList.Reverse();
+            myList.Sort();
+            myList.Add("Ivan");
+            myList.Remove("Maria");
+            Console.WriteLine(myList.Count);
+            Console.WriteLine(string.Join(" ", myList));
+            
+
+        }
+    }
+}

@@ -74,7 +74,10 @@ namespace ConsoleApp48
 
 
                             targets.RemoveRange(index - value, (value * 2) + 1);
-                            
+                            //for (int i = index - value; i <= index + value; i++)
+                            {
+                                targets.RemoveAt(index - value);
+                            }
                         }
                        
                         break;

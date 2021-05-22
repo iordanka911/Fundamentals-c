@@ -45,3 +45,41 @@ namespace ConsoleApp41
         }
     }
 }
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp69
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> numbers = new List<int>();
+
+            numbers.Add(5);
+            numbers.Add(9);
+            numbers.Add(4);
+            numbers.Add(3);
+            numbers.Add(1);
+
+            numbers.RemoveAll(x => x == 5).ToString();
+
+            //while (numbers.Contains(5))
+            //{
+            //    numbers.Remove(5);
+            //}
+            //for (int i = 0; i < numbers.Count; i++)
+            //{
+            //    int currentNumber = numbers[i];
+            //    if (currentNumber == 5)
+            //    {
+            //        numbers.Remove(currentNumber);
+            //        i--;
+            //    }
+            //}
+            Console.WriteLine(string.Join(" ", numbers));
+        }
+    }
+}

@@ -15,6 +15,13 @@ namespace SumOfDigits
                 n = n / 10;
             }
             while (n > 0);
+            
+            /*  while (inputNumber>0)
+            {
+                sum += inputNumber % 10;
+                inputNumber /= 10;
+            }
+            */
             Console.WriteLine(sumOfDigits);
         }
     }

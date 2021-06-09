@@ -76,3 +76,26 @@ namespace ConsoleApp80
     }
 }
 
+
+
+using System;
+
+namespace ConsoleApp80
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] luckyNumbers = { 4, 6, 14, 56, 67, 77, 77, 77 };
+
+            luckyNumbers[1] = 900;
+
+            string[] friends = new string[10];
+
+            friends[0] = "Jim";
+            Console.WriteLine(luckyNumbers[0]);
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -52,3 +52,27 @@ namespace ConsoleApp79
         }
     }
 }
+
+
+
+using System;
+
+namespace ConsoleApp80
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] names = new string[4] { "Daniel", "John", "Jane", "Tobi" };
+
+
+            names[0] = "Daniel";
+            names[1] = "John";
+            names[2] = "Jane";
+            names[3] = "Tobi";
+
+            Console.WriteLine(string.Join(" ", names));
+        }
+    }
+}
+

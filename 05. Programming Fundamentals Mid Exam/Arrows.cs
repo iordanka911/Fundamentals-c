@@ -90,3 +90,25 @@ namespace Arrows
         }
     }
 }
+
+
+Tests
+
+Input
+20|30|40|50|60
+Shoot Left@0@12
+Shoot Right@4@15
+Shoot Left@6@5
+Reverse
+Game over
+
+Output
+
+55 - 45 - 40 - 30 - 20
+Iskren finished the archery tournament with 10!
+    
+
+
+
+
+

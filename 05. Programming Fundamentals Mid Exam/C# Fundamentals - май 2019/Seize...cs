@@ -40,8 +40,8 @@ namespace theSeize
             int totalFire = fireCells.Sum();
 
             Console.WriteLine($"Cells:");
-
-            if (fireCells.Count != 0)
+            //if(fireCells.Count!=0)
+            if (fireCells.Any())
             {
                 Console.WriteLine(string.Join(Environment.NewLine, fireCells.Select(cell => $" - {cell}")));
             }
@@ -75,5 +75,4 @@ namespace theSeize
             return false;
         }
     }
-    
 }

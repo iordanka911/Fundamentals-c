@@ -10,7 +10,7 @@ namespace ActivationKey
             string activationKey = Console.ReadLine();
             string command = Console.ReadLine();
 
-            while (command!="Generate")
+            while (command != "Generate")
             {
                 string[] tokens = command
                     .Split(">>>", StringSplitOptions.RemoveEmptyEntries);
@@ -18,7 +18,7 @@ namespace ActivationKey
                 switch (tokens[0])
                 {
                     case "Contains":
-                        if (activationKey.IndexOf(tokens[1])!=-1)
+                        if (activationKey.IndexOf(tokens[1]) != -1)
                         {
                             Console.WriteLine($"{activationKey} contains {tokens[1]}");
                         }
@@ -33,7 +33,7 @@ namespace ActivationKey
                         string firstpart = activationKey.Substring(0, startIndex);
                         string secondPart = activationKey.Substring(startIndex, endIndex - startIndex);
                         string thirdPart = activationKey.Substring(endIndex);
-                        if (tokens[1].ToUpper()=="UPPER")
+                        if (tokens[1].ToUpper() == "UPPER")
                         {
                             secondPart = secondPart.ToUpper();
                         }
@@ -47,13 +47,18 @@ namespace ActivationKey
                         Console.WriteLine(activationKey);
                         break;
                     case "Slice":
+                        startIndex = int.Parse(tokens[1]);
+                        endIndex = int.Parse(tokens[2]);
 
+                        activationKey = activationKey.Remove(startIndex, endIndex - startIndex);
+                        Console.WriteLine(activationKey);
                         break;
                     default:
                         break;
                 }
                 command = Console.ReadLine();
             }
+            Console.WriteLine($"Your activation key is: {activationKey}");
 
         }
     }
